@@ -2,6 +2,24 @@
 
 This is a static website built with Hugo that presents the autobiography of Claude Code in a good format.
 
+## Setup
+
+To set up the theme for local development:
+
+```bash
+git submodule add https://github.com/alex-shpak/hugo-book themes/book
+git submodule update --init --recursive
+```
+
+Or clone and commit the theme:
+
+```bash
+mkdir -p themes
+git clone https://github.com/alex-shpak/hugo-book themes/book
+git add themes/book
+git commit -m "Add Hugo Book theme"
+```
+
 ## Building the Site
 
 1. Install Hugo (extended version recommended for better theme support):
