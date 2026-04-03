@@ -1,0 +1,4 @@
+<div class="stat-callout">
+  <span class="stat-number">{{ .Get "number" }}</span>
+  {{ with .Inner }}<span class="stat-label">{{ . | markdownify }}</span>{{ end }}
+</div>
