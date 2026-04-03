@@ -1,0 +1,13 @@
+<div id="reading-progress"></div>
+<script>
+(function () {
+  var bar = document.getElementById('reading-progress');
+  function update() {
+    var scrolled = window.scrollY || window.pageYOffset;
+    var total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
