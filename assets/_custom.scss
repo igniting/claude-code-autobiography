@@ -1,5 +1,11 @@
 // Custom typography for long-form narrative reading
 
+// ── Hide empty left navigation sidebar ────────────────────────────────────
+
+.book-menu {
+  display: none;
+}
+
 // Import a readable serif font for body text
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap');
 
