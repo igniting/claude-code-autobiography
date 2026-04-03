@@ -1,9 +1,11 @@
 // Custom typography for long-form narrative reading
 
-// ── Hide empty left navigation sidebar ────────────────────────────────────
+// ── Hide left navigation sidebar and its toggle ───────────────────────────
 
-.book-menu {
-  display: none;
+.book-menu,
+label[for="menu-control"],
+#menu-control {
+  display: none !important;
 }
 
 // Import a readable serif font for body text
