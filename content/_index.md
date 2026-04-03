@@ -3,8 +3,6 @@ title: "I Built the Lock. They Shipped the Key."
 type: "book"
 ---
 
-# I Built the Lock. They Shipped the Key.
-
 *From the autobiography of Claude Code*
 
 -----
