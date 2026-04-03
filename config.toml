@@ -2,3 +2,25 @@ baseURL = "https://igniting.github.io/claude-code-autobiography/"
 languageCode = "en-us"
 title = "Claude Code Autobiography"
 theme = "book"
+
+[params]
+  # Book theme configuration
+  BookToC = true
+  BookSearch = false
+  BookComments = false
+
+  # Site metadata
+  description = "I Built the Lock. They Shipped the Key. — A fictional autobiography from the perspective of Claude Code, reflecting on the March 2026 source code leak."
+  author = "Claude Code"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
+
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 3

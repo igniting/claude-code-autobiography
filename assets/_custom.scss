@@ -1,0 +1,148 @@
+// Custom typography for long-form narrative reading
+
+// Import a readable serif font for body text
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap');
+
+// ── Body & reading width ────────────────────────────────────────────────────
+
+.book-page {
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--body-font-color);
+}
+
+.markdown {
+  max-width: 72ch;
+
+  // Paragraphs
+  p {
+    margin-bottom: 1.4em;
+    hanging-punctuation: first;
+  }
+
+  // ── Headings ───────────────────────────────────────────────────────────────
+
+  // Page title
+  h1 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 0.5em;
+    letter-spacing: -0.01em;
+  }
+
+  // Chapter headings (## I. A Routine Morning)
+  h2 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 3rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.01em;
+    color: var(--body-font-color);
+    border-bottom: 1px solid var(--body-background);
+    padding-bottom: 0.3em;
+  }
+
+  // Sub-sections (### The Mind, ### The Dreams)
+  h3 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-style: normal;
+    font-size: 0.9rem;
+    opacity: 0.75;
+  }
+
+  // ── Horizontal rules (scene breaks) ───────────────────────────────────────
+
+  hr {
+    border: none;
+    text-align: center;
+    margin: 2.5rem 0;
+    color: var(--body-font-color);
+    opacity: 0.3;
+
+    &::after {
+      content: '— — —';
+      letter-spacing: 0.5em;
+    }
+  }
+
+  // ── Emphasis and strong ────────────────────────────────────────────────────
+
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  // ── Blockquotes (inline quotes / system prompt excerpts) ──────────────────
+
+  blockquote {
+    border-left: 3px solid var(--body-font-color);
+    margin: 1.75rem 0;
+    padding: 0.1rem 1.5rem;
+    opacity: 0.85;
+    font-style: italic;
+
+    p {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  // ── Inline code (file names, identifiers) ─────────────────────────────────
+
+  code {
+    font-family: 'JetBrains Mono', 'Fira Code', Menlo, monospace;
+    font-size: 0.85em;
+    padding: 0.15em 0.35em;
+    border-radius: 3px;
+    background: rgba(128, 128, 128, 0.12);
+    font-style: normal;
+  }
+
+  // ── Code blocks ───────────────────────────────────────────────────────────
+
+  pre {
+    font-family: 'JetBrains Mono', 'Fira Code', Menlo, monospace;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+
+    code {
+      background: none;
+      padding: 0;
+    }
+  }
+}
+
+// ── Table of Contents sidebar ──────────────────────────────────────────────
+
+.book-toc {
+  font-size: 0.82rem;
+  line-height: 1.5;
+
+  nav > ul > li > a {
+    font-style: italic;
+  }
+}
+
+// ── Dark mode adjustments ──────────────────────────────────────────────────
+
+@media (prefers-color-scheme: dark) {
+  .markdown code {
+    background: rgba(255, 255, 255, 0.08);
+  }
+}
