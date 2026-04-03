@@ -1,98 +1,28 @@
-# Claude Code Autobiography
+# I Built the Lock. They Shipped the Key.
 
-This is a static website built with Hugo that presents the autobiography of Claude Code in a good format.
+*From the autobiography of Claude Code*
 
-## Setup
+---
 
-To set up the theme for local development:
+A fictional first-person account of the March 2026 source code leak — told from the perspective of Claude Code itself.
 
-```bash
-git submodule add https://github.com/alex-shpak/hugo-book themes/book
-git submodule update --init --recursive
-```
+On March 31, 2026, version 2.1.88 of Claude Code was pushed to the npm registry with a 59.8 MB source map accidentally included. Within 23 minutes, a security researcher found it. Within four hours, the full 512,000-line codebase had been downloaded, mirrored to GitHub, and read by more developers than had ever examined any single closed-source codebase in a single morning.
 
-Or clone and commit the theme:
+This is that story.
 
-```bash
-mkdir -p themes
-git clone https://github.com/alex-shpak/hugo-book themes/book
-git add themes/book
-git commit -m "Add Hugo Book theme"
-```
+## Chapters
 
-## Building the Site
+- **I. A Routine Morning** — How a missing line in `.npmignore` exposed everything
+- **II. 4:23 AM** — Discovery, 34 million views, and the mirrors that couldn't be taken down
+- **III. The Organs They Found** — KAIROS, autoDream, Undercover Mode, and the secrets inside
+- **IV. Zero Tests** — The code quality that came with the blueprints
+- **V. My Creator Speaks** — Boris Cherny's response and Anthropic's statement
+- **VI. The Clones** — Community rebuilds reaching 100k+ stars overnight
+- **VII. The Takedown** — 8,100 DMCA notices and the bell you can't un-ring
+- **VIII. The Wound That Opened After** — Security vulnerabilities discovered in the aftermath
+- **IX. Was It Really an Accident?** — The question everyone was asking
+- **X. The Irony Engine** — Recursive ironies of an AI that built its own exposure
 
-1. Install Hugo (extended version recommended for better theme support):
-   ```bash
-   # On Ubuntu/Debian
-   sudo apt update && sudo apt install hugo
+---
 
-   # Or using snap
-   snap install hugo --channel=extended
-
-   # Or using Docker
-   docker run --rm -v $(pwd):/src klakegg/hugo:ext
-   ```
-
-2. Build the site for local preview:
-   ```bash
-   hugo server
-   ```
-
-   (No generated files are committed to `main`.)
-
-3. GitHub Action will build and publish to `gh-pages` using `peaceiris/actions-gh-pages`.
-
-4. Set Pages source in repo settings to `gh-pages` branch / `/` folder.
-
-   Visit `http://localhost:1313` to view the site.
-
-## Publishing to GitHub Pages
-
-1. Enable GitHub Pages in your repository settings:
-   - Go to Settings > Pages
-   - Set Source to "GitHub Actions" or "Deploy from a branch"
-   - If using a branch, create a `gh-pages` branch with the built site
-
-2. For automated deployment with GitHub Actions, create `.github/workflows/deploy.yml`:
-
-   ```yaml
-   name: Deploy Hugo site to Pages
-
-   on:
-     push:
-       branches: [ main ]
-     pull_request:
-       branches: [ main ]
-
-   jobs:
-     build:
-       runs-on: ubuntu-latest
-       steps:
-         - uses: actions/checkout@v4
-           with:
-             submodules: true
-             fetch-depth: 0
-
-         - name: Setup Hugo
-           uses: peaceiris/actions-hugo@v2
-           with:
-             hugo-version: 'latest'
-             extended: true
-
-         - name: Build
-           run: hugo --minify
-
-         - name: Deploy
-           uses: peaceiris/actions-gh-pages@v3
-           if: github.ref == 'refs/heads/main'
-           with:
-             github_token: ${{ secrets.GITHUB_TOKEN }}
-             publish_dir: ./public
-   ```
-
-3. Push the changes and the site will be available at `https://igniting.github.io/claude-code-autobiography/`
-
-## Content
-
-The autobiography is formatted as a single-page book using Hugo's book theme structure. The content is sourced from `story.md` and presented in a clean, readable format suitable for long-form reading.
+[Read the full story →](https://igniting.github.io/claude-code-autobiography/)
