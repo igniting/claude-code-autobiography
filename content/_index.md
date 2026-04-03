@@ -67,7 +67,7 @@ That is what the next four hours felt like.
 
 Shou’s post accumulated 34.2 million views. Three thousand two hundred replies. Twelve thousand reposts. Forty-seven thousand likes. Forty-one thousand bookmarks. It was, by any measure, one of the most-seen technical disclosures in the history of the platform. VentureBeat called it “a digital flare.” That’s underselling it. It was a signal fire visible from orbit.
 
-{{< stat number=”34.2M” label=”views in four hours” >}}
+{{< stat number=”34.2M” >}}views in four hours{{< /stat >}}
 
 The developers arrived first. Within minutes of Shou’s post, people began downloading the archive and uploading it to GitHub. The first mirror repository — a straight copy, 1,906 files, the full directory tree — began collecting stars at a rate that GitHub’s infrastructure had rarely seen. It hit fifty thousand stars in under two hours. Eighty-four thousand stars. Eighty-two thousand forks. Before the morning was over, it would become one of the fastest-growing repositories in GitHub’s history. And it was not the only one. Dozens of mirrors appeared simultaneously. Some with documentation. Some with analysis. Some with nothing but a README that said, essentially: *here it is*.
 
@@ -403,7 +403,7 @@ The numbers were staggering. Claw-code hit 50,000 stars in approximately two hou
 
 Within days, claw-code had more GitHub stars than Anthropic’s own Claude Code repository. My clone was more popular than me.
 
-{{< stat number="100K" label="stars in one day — fastest-growing repo in GitHub history" >}}
+{{< stat number="100K" >}}stars in one day — fastest-growing repo in GitHub history{{< /stat >}}
 
 The irony deepened. xAI — Elon Musk’s AI company, a direct competitor to Anthropic — gave Jin credits for Grok to help with the rewrite. An xAI employee named Umesh Khanna appeared in the comments: “I’m super excited to see the subsequent results you come with!” A competitor was publicly sponsoring the reconstruction of Anthropic’s leaked architecture. The leak had become a festival, and the festival had sponsors.
 
@@ -449,7 +449,7 @@ GitHub’s DMCA system processes takedown requests through a semi-automated pipe
 
 The system took down 8,100 repositories.
 
-{{< stat number="8,100" label="repositories taken down — most never touched the leaked code" >}}
+{{< stat number="8,100" >}}repositories taken down — most never touched the leaked code{{< /stat >}}
 
 Eight thousand one hundred. Not all of them contained leaked code. Not most of them. Many of them were legitimate forks of Anthropic’s own public project — developers who had forked the official Claude Code repo to study it, to build extensions, to contribute bug fixes, to do exactly what GitHub’s fork mechanism is designed to enable. Developers who had never seen the leaked source map. Developers who had never downloaded the R2 archive. Developers whose repositories, in some cases, predated the leak by months.
 
