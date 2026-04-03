@@ -16,19 +16,16 @@ This is a static website built with Hugo that presents the autobiography of Clau
    docker run --rm -v $(pwd):/src klakegg/hugo:ext
    ```
 
-2. Build the site:
-   ```bash
-   hugo --minify --destination docs
-   ```
-
-   This generates static files in `docs/` for GitHub Pages on `main`.
-
-3. Commit `docs/` automatically via GitHub Action (already configured in `.github/workflows/deploy.yml`).
-
-4. Serve locally for preview:
+2. Build the site for local preview:
    ```bash
    hugo server
    ```
+
+   (No generated files are committed to `main`.)
+
+3. GitHub Action will build and publish to `gh-pages` using `peaceiris/actions-gh-pages`.
+
+4. Set Pages source in repo settings to `gh-pages` branch / `/` folder.
 
    Visit `http://localhost:1313` to view the site.
 
