@@ -18,12 +18,14 @@ This is a static website built with Hugo that presents the autobiography of Clau
 
 2. Build the site:
    ```bash
-   hugo
+   hugo --minify --destination docs
    ```
 
-   This will generate the static files in the `public/` directory.
+   This generates static files in `docs/` for GitHub Pages on `main`.
 
-3. Serve locally for preview:
+3. Commit `docs/` automatically via GitHub Action (already configured in `.github/workflows/deploy.yml`).
+
+4. Serve locally for preview:
    ```bash
    hugo server
    ```
